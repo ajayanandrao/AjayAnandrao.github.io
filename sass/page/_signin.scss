@@ -1,0 +1,35 @@
+@use '../custome' as *;
+@use "../page/mixin";
+
+
+
+
+.form-center{
+    display: flex;
+    justify-content: center;
+    .w-150{
+        width: 300px;
+    }
+    form{
+    padding: 10px;
+    }
+}
+.sotioal-icon-row{
+    width: 300px;
+    display: flex;
+    // background: rebeccapurple;
+}
+.sotioal-icon{
+    margin-top: 20px;
+.fa-brands{
+    cursor: pointer;
+    display: flex;
+    margin: 0 0px;
+    color: rgba(255, 255, 255, 0.637);
+    font-size:30px;
+}
+.fa-brand-mg{
+    display: flex;
+    margin: 0 20px;
+}
+}

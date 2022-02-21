@@ -1,0 +1,26 @@
+@use "custome";
+@use "./page/navbar";
+@use "./reset";
+@use "./variable";
+
+@use "./page/mixin";
+
+@use "./page/Background-Img";
+@use "./page/HomePage/index.scss";
+
+@use "./page/HomePage/Section-two";
+@use "./page/HomePage/Section-three";
+@use "./page/HomePage/Section-four";
+
+@use "./button/button";
+
+// -------------------------------Page------------------------
+@use "./page/about";
+@use "./page/Experience";
+@use "./page/signin";
+@use "./page/signUp";
+@use "./page/HomePage/ui";
+@use "./page/mylaptop";
+@use "./page/TajMahal";
+@use "./page/visual";
+@use "./page/contact";

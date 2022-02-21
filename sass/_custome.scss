@@ -1,0 +1,19 @@
+@import "./variable";
+@font-face {
+    font-family:"Baloo";
+    src: url();
+}
+
+html{
+    // scroll-behavior: smooth;
+    scroll-behavior:unset;
+}
+body{
+    background: #272727 !important;
+    color: white;    
+}
+button{
+    color: white !important;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

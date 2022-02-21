@@ -1,0 +1,90 @@
+@use "../../custome" as *;
+
+@mixin desk {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @mixin tab2 {
+      @media(max-width: 740px){
+          @content;
+      }
+  }
+@mixin tab {
+    @media (max-width: 990px) {
+      @content;
+    }
+  }
+  @mixin  mobile {
+    //   414px
+    @media (max-width: 500px) { 
+      @content;
+    }
+  }
+// ------------------------------------------------------------------
+.size{
+    width: 100%;
+    height: 100vh;
+}
+.page-four-span{
+    display: block;
+    padding-top: 80px;
+    .span-display-block{
+        display: block;
+        text-align: center;
+    }
+}
+
+.div-center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.page-four-img-div{
+    cursor: pointer;
+    margin: 30px;
+    width: auto;
+    display:inline-flex;
+}
+
+
+@include desk{
+    .page-four-img-div{
+        margin:30px;
+        display:inline-flex;
+    }
+    .page-four-img{
+        width: 400px;
+        }
+}
+
+@include tab {
+
+    .div-center{
+        display: flex;
+        justify-content: center;
+    }
+    .page-four-img-div{
+        margin:10px;
+        
+        display:inline-flex;
+    }
+.page-four-img{
+width: 350px;
+margin-bottom: 20px;
+}
+}
+
+
+// @include tab2{
+//     .div-center{
+//         display: grid;
+//         justify-content: center;
+ 
+//     }
+// }
+// @include mobile{
+//     .div-center{
+//         display: grid;
+//     }
+//  }

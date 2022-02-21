@@ -1,0 +1,154 @@
+
+
+@mixin tab {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @mixin  mobile {
+    @media (max-width: 414px) {
+      @content;
+    }
+    
+  }
+  .container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.navbar-brand{
+    font-weight: 500;
+}
+.btnn{
+    background: #0d6efd;
+    color: white;
+    box-shadow: 8px 7px 10px rgba(0, 0, 0, 0.404);
+    &:hover{
+        color: white;
+        background:#0c58ca ;
+    }
+}
+.form-width-containerGlass{
+    color: rgba(255, 255, 255, 0.774);
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 10px 10px 50px rgba(0,0,0,0.2); 
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+	border-left: 1px solid rgba(255,255,255,0.3);
+    border-right: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+.form-width-container{
+    
+    width: 270px;
+    padding-top: 10px;
+    .login-link{
+        text-decoration: none;
+        float: right;
+        
+    }
+    .form-label-text{
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #4d55dc;
+    }
+    .link-logo{
+        float: right;
+        display: flex;
+        align-items: center;
+        .logo-div{
+            margin: 0px 5px;
+        }
+    }
+}
+
+::-webkit-input-placeholder{
+    color: white !important;
+}
+
+
+    @include tab{
+body{
+    
+}
+        .container{ 
+          width: 80%;
+        }
+        .form-width-container{
+            width: 95%;
+         
+            .input-container{
+                margin: 40px 0px;
+            }
+
+            .form-label{
+                display: none;
+            }
+            .login-link{
+                text-decoration: none;
+                float: right;
+
+            }
+            .lable-text{
+                text-align: center;
+            }
+            .link-logo{
+                float: left;
+                display: flex;
+                align-items: center;
+                .logo-div{
+                    margin: 0px 3px;
+                img{
+                    width: 40px;
+                }
+                }
+            }
+            ::-webkit-input-placeholder{
+                color: gray !important;
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+
+    @include mobile{
+        .container{
+            background:none;
+        }
+        .form-width-container{
+            width: 300px;
+            .form-label{
+                display: none;
+            }
+            .login-link{
+                text-decoration: none;
+                float: right;
+
+            }
+           
+            .link-logo{
+                float: left;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .logo-div{
+                    margin: 0px 3px;
+                img{
+                    width: 40px;
+                }
+                
+                }
+            }
+          
+        }
+
+    }

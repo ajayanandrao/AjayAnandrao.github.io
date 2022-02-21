@@ -1,0 +1,82 @@
+@use "../custome" as *;
+@use "./mixin";
+
+@mixin desk {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+@mixin tab {
+    @media (max-width: 990px) {
+      @content;
+    }
+  }
+  @mixin  mobile {
+    //   414px
+    @media (max-width: 500px) { 
+      @content;
+    }
+    
+  }
+//   ------------------------------------------------
+
+.Contact-page-card-left{
+    background:#34495e;
+    display:flex;
+    padding: 20px;
+    color: white;
+    // width: 300px;
+    border-radius: 15px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+}
+.Contact-inner-text{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+}
+.colum{
+    display: block;
+}
+.Contact-flex{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 10px;
+}
+    .Contact-inner-card1{
+        width: 230px;
+        height: 130px;
+        background: #2c3e50;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        
+        cursor: pointer;
+    }
+
+    .about-inner-img{
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .about-inner-text{
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+    }
+ 
+    @include tab{
+        .Contact-inner-card1{
+            width: 400px;
+        }
+    }
+
+    @include mobile{
+        .Contact-inner-card1{
+            width: 350px;
+        }
+    }
