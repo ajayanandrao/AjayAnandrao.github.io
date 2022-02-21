@@ -21,70 +21,90 @@
       @content;
     }
   }
+  @mixin  mobile-sm {
+    //   414px
+    @media (max-width: 360px) { 
+      @content;
+    }
+  }
 // ------------------------------------------------------------------
-.size{
+body{
+  color:white;
+}
+.ui-main{
     width: 100%;
     height: 100vh;
+ color: white;
+text-align: center;
 }
-.page-four-span{
-    display: block;
-    padding-top: 80px;
-    .span-display-block{
-        display: block;
-        text-align: center;
-    }
-}
-
-.div-center{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.page-four-img-div{
-    cursor: pointer;
-    margin: 30px;
-    width: auto;
-    display:inline-flex;
+.ui-img-container{
+  width: 100%;
+  height: auto;
+  // background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+flex-direction: row;
 }
 
-
+.taj{
+  width: 550px;
+  height: 310px;
+  margin: 20px;
+  border-radius: 10px;
+}
+#ui-text{
+  width: 80%;
+  height: auto;
+ margin: 0 auto;
+ text-align: center;
+}
 @include desk{
-    .page-four-img-div{
-        margin:30px;
-        display:inline-flex;
+  .taj{
+    border-radius: 10px;
+    width: 460px;
+    height: 300px;
+  }
+}
+@include tab{
+  // #ui-text{
+  //   color: red;
+  // }
+  .taj{
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+  }
+    .ui-img-container{
+      display: flex;
+      flex-direction: column;
+      
+    }  
+}
+@include mobile{
+  
+    .ui-img-container{
+      display: flex;
+      flex-direction: column;
+      // background: red;
+      .taj{
+        border-radius: 10px;
+        width: 360px;
+        height: 220px;
+      }
     }
-    .page-four-img{
-        width: 400px;
-        }
+  
 }
 
-@include tab {
+@include mobile-sm{
 
-    .div-center{
-        display: flex;
-        justify-content: center;
+  .ui-img-container{
+    display: flex;
+    flex-direction: column;
+    .taj{
+      border-radius: 10px;
+      width: 350px;
+      height: 200px;
     }
-    .page-four-img-div{
-        margin:10px;
-        
-        display:inline-flex;
-    }
-.page-four-img{
-width: 350px;
-margin-bottom: 20px;
+  }
 }
-}
-
-
-// @include tab2{
-//     .div-center{
-//         display: grid;
-//         justify-content: center;
- 
-//     }
-// }
-// @include mobile{
-//     .div-center{
-//         display: grid;
-//     }
-//  }
